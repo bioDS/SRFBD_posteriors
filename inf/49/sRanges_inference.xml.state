@@ -1,0 +1,23 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='tree'>((20:2.2132720361259013,19:2.2132720361259013)41:2.2633496261361,((((((((16:0.2979760739217916,(15:0.10012172223864624,7:0.10012172223864624)42:0.19785435168314536)27:0.2878988066387884,9:0.0)29:0.010105604821507574,6:0.5959804853820876)36:0.7062722439384217,12:1.3022527293205093)38:0.31000052711490556,(((4:0.24011166689889313,17:0.24011166689889313)34:0.071001860081578,3:0.3111135269804711)40:0.7439991393056565,(14:0.417059970766954,8:0.417059970766954)22:0.6380526955191737)33:0.5571405901492872)25:1.2344971969038336,(1:0.4863094252202983,18:0.4863094252202983)37:2.36044102811895)39:0.012137570303498268,((5:0.9555709493616241,(13:0.625798633291042,10:0.0)26:0.3297723160705821)30:0.139359716903943,((2:0.2263798434471948,0:0.2263798434471948)32:0.5658666723073216,21:0.7922465157545163)31:0.3026841505110508)28:1.7639573573771796)35:0.947465318043827,11:3.806353341686574)23:0.6702683205754276)24:0.0</statenode>
+<statenode id='origin'>origin[1 1] (0.0,Infinity): 4.785431249238101 </statenode>
+<statenode id='netDiversification'>netDiversification[1 1] (0.0,Infinity): 0.7055612857889847 </statenode>
+<statenode id='turnOver'>turnOver[1 1] (0.0,1.0): 0.2865975008316265 </statenode>
+<statenode id='samplingProportion'>samplingProportion[1 1] (0.0,Infinity): 0.23784363999945454 </statenode>
+<statenode id='rho'>rho[1 1] (0.0,Infinity): 0.7300452960061337 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"originScaler","p":0.4591560018493251,"accept":27778,"reject":73093,"acceptFC":27624,"rejectFC":72978,"rejectIv":18258,"rejectOp":0},
+{"id":"netDiversificatonOperator","p":0.651029829924167,"accept":122906,"reject":382257,"acceptFC":122478,"rejectFC":381185,"rejectIv":361019,"rejectOp":0},
+{"id":"turnOverOperator","p":0.2865857611797636,"accept":102717,"reject":403093,"acceptFC":101829,"rejectFC":402572,"rejectIv":201338,"rejectOp":85051},
+{"id":"samplingProportionOperator","p":0.4118311773834516,"accept":127185,"reject":378254,"acceptFC":126327,"rejectFC":377650,"rejectIv":99880,"rejectOp":0},
+{"id":"rhoOperator","p":0.503943940054327,"accept":101836,"reject":403717,"acceptFC":101144,"rejectFC":402903,"rejectIv":239938,"rejectOp":0},
+{"id":"SRWilsonBalding","p":"NaN","accept":1007291,"reject":1013366,"acceptFC":1004276,"rejectFC":1010513,"rejectIv":102288,"rejectOp":48949},
+{"id":"LeftRightChildSwap","p":"NaN","accept":505394,"reject":55,"acceptFC":503903,"rejectFC":54,"rejectIv":0,"rejectOp":0},
+{"id":"LeafToSampledAncestorJump","p":"NaN","accept":92425,"reject":1924310,"acceptFC":92132,"rejectFC":1918785,"rejectIv":1877160,"rejectOp":1877158},
+{"id":"unknown","p":"NaN","accept":1727253,"reject":293806,"acceptFC":1722257,"rejectFC":292923,"rejectIv":0,"rejectOp":0},
+{"id":"SATreeRootScaler","p":0.35823388183889093,"accept":41760,"reject":261245,"acceptFC":41517,"rejectFC":260592,"rejectIv":233083,"rejectOp":59434},
+{"id":"treeScaler","p":0.20584263305994602,"accept":81695,"reject":928565,"acceptFC":81496,"rejectFC":925806,"rejectIv":881581,"rejectOp":301049}
+]}
+-->

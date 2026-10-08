@@ -1,0 +1,23 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='tree'>(((4:1.74538363226128,(3:0.05616106609026777,(2:0.02922235104284457,0:0.02922235104284457)11:0.0269387150474232)8:1.689222566171012)12:0.28664162544443905,(5:1.0600103148035367,1:1.0600103148035367)9:0.9720149429021823)7:0.46773675970485096,6:0.0)10:0.0</statenode>
+<statenode id='origin'>origin[1 1] (0.0,Infinity): 5.54238560810461 </statenode>
+<statenode id='netDiversification'>netDiversification[1 1] (0.0,Infinity): 0.8106274872448666 </statenode>
+<statenode id='turnOver'>turnOver[1 1] (0.0,1.0): 0.3767420002211952 </statenode>
+<statenode id='samplingProportion'>samplingProportion[1 1] (0.0,Infinity): 0.23977623499165807 </statenode>
+<statenode id='rho'>rho[1 1] (0.0,Infinity): 0.7624224851596818 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"originScaler","p":0.4775384330612093,"accept":26254,"reject":74947,"acceptFC":26115,"rejectFC":74813,"rejectIv":19754,"rejectOp":0},
+{"id":"netDiversificatonOperator","p":0.6419548921343593,"accept":119864,"reject":385235,"acceptFC":119407,"rejectFC":384215,"rejectIv":364583,"rejectOp":0},
+{"id":"turnOverOperator","p":0.2909838242980378,"accept":119330,"reject":385370,"acceptFC":118381,"rejectFC":384831,"rejectIv":187383,"rejectOp":69476},
+{"id":"samplingProportionOperator","p":0.319672114007354,"accept":129693,"reject":375235,"acceptFC":128788,"rejectFC":374688,"rejectIv":112198,"rejectOp":0},
+{"id":"rhoOperator","p":0.5109939352870283,"accept":115528,"reject":390034,"acceptFC":114743,"rejectFC":389356,"rejectIv":366050,"rejectOp":0},
+{"id":"SRWilsonBalding","p":"NaN","accept":836229,"reject":1183980,"acceptFC":833829,"rejectFC":1180481,"rejectIv":317499,"rejectOp":87351},
+{"id":"LeftRightChildSwap","p":"NaN","accept":505845,"reject":0,"acceptFC":504342,"rejectFC":0,"rejectIv":0,"rejectOp":0},
+{"id":"LeafToSampledAncestorJump","p":"NaN","accept":158574,"reject":1862046,"acceptFC":158096,"rejectFC":1856552,"rejectIv":1817649,"rejectOp":1739169},
+{"id":"unknown","p":"NaN","accept":1576750,"reject":442691,"acceptFC":1572151,"rejectFC":441310,"rejectIv":0,"rejectOp":0},
+{"id":"SATreeRootScaler","p":0.20350774492097518,"accept":9566,"reject":294121,"acceptFC":9427,"rejectFC":293365,"rejectIv":287965,"rejectOp":173177},
+{"id":"treeScaler","p":0.02705653949066091,"accept":24649,"reject":984060,"acceptFC":24255,"rejectFC":981500,"rejectIv":969195,"rejectOp":581428}
+]}
+-->

@@ -1,0 +1,809 @@
+<beast version='2.0'
+       namespace='beast.pkgmgmt
+       :beast.base.core
+       :beast.base.inference
+       :beast.base.evolution.tree.coalescent
+       :beast.base.evolution.sitemodel
+       :beast.base.evolution.tree
+       :beast.pkgmgmt
+       :beast.base.core
+       :beast.base.inference.util:beast.evolution.nuc:beast.base.evolution.operator:beast.base.inference.operator:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood:beast.base.evolution.alignment
+       :sr.evolution.operators
+       :sa.evolution.operators
+       :sr.evolution.tree
+       :sr.evolution.sranges
+       :sr.speciation
+       :feast.parameter
+       :ssr.speciation'>
+
+
+    <map name="Uniform">beast.base.inference.distribution.Uniform</map>
+    <map name="Exponential">beast.base.inference.distribution.Exponential</map>
+    <map name="LogNormal">beast.base.inference.distribution.LogNormalDistributionModel</map>
+    <map name="Normal">beast.base.inference.distribution.Normal</map>
+    <map name="Beta">beast.base.inference.distribution.Beta</map>
+    <map name="Gamma">beast.base.inference.distribution.Gamma</map>
+    <map name="LaplaceDistribution">beast.base.inference.distribution.LaplaceDistribution</map>
+    <map name="prior">beast.base.inference.distribution.Prior</map>
+    <map name="InverseGamma">beast.base.inference.distribution.InverseGamma</map>
+    <map name="OneOnX">beast.base.inference.distribution.OneOnX</map>
+
+
+    <run spec="MCMC" id="mcmc" chainLength="10000000">
+
+        <state id="state" storeEvery="100">
+            <tree id="tree" spec="sr.evolution.tree.SRTree" nodetype="sr.evolution.tree.SRNode" name="stateNode">
+                <trait id="dateTrait.t:tree" spec="beast.base.evolution.tree.TraitSet" traitname="date-backward">
+                    <taxa spec="TaxonSet" id="taxonSet">
+                        <taxon spec='Taxon' id='t137_first'/>
+						<taxon spec='Taxon' id='t39_first'/>
+						<taxon spec='Taxon' id='t96_first'/>
+						<taxon spec='Taxon' id='t164_first'/>
+						<taxon spec='Taxon' id='t57_first'/>
+						<taxon spec='Taxon' id='t305_first'/>
+						<taxon spec='Taxon' id='t226_first'/>
+						<taxon spec='Taxon' id='t81_first'/>
+						<taxon spec='Taxon' id='t110_first'/>
+						<taxon spec='Taxon' id='t338_first'/>
+						<taxon spec='Taxon' id='t126_first'/>
+						<taxon spec='Taxon' id='t38_first'/>
+						<taxon spec='Taxon' id='t104_first'/>
+						<taxon spec='Taxon' id='t306_first'/>
+						<taxon spec='Taxon' id='t348_first'/>
+						<taxon spec='Taxon' id='t88_first'/>
+						<taxon spec='Taxon' id='t272_first'/>
+						<taxon spec='Taxon' id='t23_first'/>
+						<taxon spec='Taxon' id='t335_first'/>
+						<taxon spec='Taxon' id='t19_first'/>
+						<taxon spec='Taxon' id='t82_first'/>
+						<taxon spec='Taxon' id='t93_first'/>
+						<taxon spec='Taxon' id='t198_first'/>
+						<taxon spec='Taxon' id='t67_first'/>
+						<taxon spec='Taxon' id='t296_first'/>
+						<taxon spec='Taxon' id='t146_first'/>
+						<taxon spec='Taxon' id='t17_first'/>
+						<taxon spec='Taxon' id='t121_first'/>
+						<taxon spec='Taxon' id='t323_first'/>
+						<taxon spec='Taxon' id='t60_first'/>
+						<taxon spec='Taxon' id='t327_first'/>
+						<taxon spec='Taxon' id='t115_first'/>
+						<taxon spec='Taxon' id='t340_first'/>
+						<taxon spec='Taxon' id='t130_first'/>
+						<taxon spec='Taxon' id='t111_first'/>
+						<taxon spec='Taxon' id='t163_first'/>
+						<taxon spec='Taxon' id='t26_first'/>
+						<taxon spec='Taxon' id='t70_first'/>
+						<taxon spec='Taxon' id='t259_first'/>
+						<taxon spec='Taxon' id='t298_first'/>
+						<taxon spec='Taxon' id='t72_first'/>
+						<taxon spec='Taxon' id='t288_first'/>
+						<taxon spec='Taxon' id='t231_first'/>
+						<taxon spec='Taxon' id='t201_first'/>
+						<taxon spec='Taxon' id='t139_first'/>
+						<taxon spec='Taxon' id='t177_first'/>
+						<taxon spec='Taxon' id='t98_first'/>
+						<taxon spec='Taxon' id='t190_first'/>
+						<taxon spec='Taxon' id='t286_first'/>
+						<taxon spec='Taxon' id='t159_first'/>
+						<taxon spec='Taxon' id='t22_first'/>
+						<taxon spec='Taxon' id='t204_first'/>
+						<taxon spec='Taxon' id='t42_first'/>
+						<taxon spec='Taxon' id='t196_first'/>
+						<taxon spec='Taxon' id='t216_first'/>
+						<taxon spec='Taxon' id='t162_first'/>
+						<taxon spec='Taxon' id='t160_first'/>
+						<taxon spec='Taxon' id='t52_first'/>
+						<taxon spec='Taxon' id='t50_first'/>
+						<taxon spec='Taxon' id='t180_first'/>
+						<taxon spec='Taxon' id='t283_first'/>
+						<taxon spec='Taxon' id='t76_first'/>
+						<taxon spec='Taxon' id='t294_first'/>
+						<taxon spec='Taxon' id='t179_first'/>
+						<taxon spec='Taxon' id='t255_first'/>
+						<taxon spec='Taxon' id='t304_first'/>
+						<taxon spec='Taxon' id='t75_first'/>
+						<taxon spec='Taxon' id='t342_first'/>
+						<taxon spec='Taxon' id='t74_first'/>
+						<taxon spec='Taxon' id='t341_first'/>
+						<taxon spec='Taxon' id='t7_first'/>
+						<taxon spec='Taxon' id='t330_first'/>
+						<taxon spec='Taxon' id='t289_first'/>
+						<taxon spec='Taxon' id='t170_first'/>
+						<taxon spec='Taxon' id='t107_first'/>
+						<taxon spec='Taxon' id='t175_first'/>
+						<taxon spec='Taxon' id='t95_first'/>
+						<taxon spec='Taxon' id='t135_first'/>
+						<taxon spec='Taxon' id='t14_first'/>
+						<taxon spec='Taxon' id='t325_first'/>
+						<taxon spec='Taxon' id='t197_first'/>
+						<taxon spec='Taxon' id='t297_first'/>
+						<taxon spec='Taxon' id='t238_first'/>
+						<taxon spec='Taxon' id='t36_first'/>
+						<taxon spec='Taxon' id='t113_first'/>
+						<taxon spec='Taxon' id='t345_first'/>
+						<taxon spec='Taxon' id='t243_first'/>
+						<taxon spec='Taxon' id='t148_first'/>
+						<taxon spec='Taxon' id='t45_first'/>
+						<taxon spec='Taxon' id='t317_first'/>
+						<taxon spec='Taxon' id='t108_first'/>
+						<taxon spec='Taxon' id='t281_first'/>
+						<taxon spec='Taxon' id='t182_first'/>
+						<taxon spec='Taxon' id='t167_first'/>
+						<taxon spec='Taxon' id='t66_first'/>
+						<taxon spec='Taxon' id='t269_first'/>
+						<taxon spec='Taxon' id='t6_first'/>
+						<taxon spec='Taxon' id='t208_first'/>
+						<taxon spec='Taxon' id='t291_first'/>
+						<taxon spec='Taxon' id='t235_first'/>
+						<taxon spec='Taxon' id='t346_first'/>
+						<taxon spec='Taxon' id='t209_first'/>
+						<taxon spec='Taxon' id='t102_first'/>
+						<taxon spec='Taxon' id='t41_first'/>
+						<taxon spec='Taxon' id='t56_first'/>
+						<taxon spec='Taxon' id='t120_first'/>
+						<taxon spec='Taxon' id='t13_first'/>
+						<taxon spec='Taxon' id='t290_first'/>
+						<taxon spec='Taxon' id='t200_first'/>
+						<taxon spec='Taxon' id='t1_first'/>
+						<taxon spec='Taxon' id='t227_first'/>
+						<taxon spec='Taxon' id='t12_first'/>
+						<taxon spec='Taxon' id='t308_first'/>
+						<taxon spec='Taxon' id='t331_first'/>
+						<taxon spec='Taxon' id='t35_first'/>
+						<taxon spec='Taxon' id='t210_first'/>
+						<taxon spec='Taxon' id='t275_first'/>
+						<taxon spec='Taxon' id='t217_first'/>
+						<taxon spec='Taxon' id='t156_first'/>
+						<taxon spec='Taxon' id='t114_first'/>
+						<taxon spec='Taxon' id='t329_first'/>
+						<taxon spec='Taxon' id='t258_first'/>
+						<taxon spec='Taxon' id='t91_first'/>
+						<taxon spec='Taxon' id='t332_first'/>
+						<taxon spec='Taxon' id='t292_first'/>
+						<taxon spec='Taxon' id='t150_first'/>
+						<taxon spec='Taxon' id='t151_first'/>
+						<taxon spec='Taxon' id='t203_first'/>
+						<taxon spec='Taxon' id='t263_first'/>
+						<taxon spec='Taxon' id='t55_first'/>
+						<taxon spec='Taxon' id='t61_first'/>
+						<taxon spec='Taxon' id='t65_first'/>
+						<taxon spec='Taxon' id='t293_first'/>
+						<taxon spec='Taxon' id='t223_first'/>
+						<taxon spec='Taxon' id='t178_first'/>
+						<taxon spec='Taxon' id='t315_first'/>
+						<taxon spec='Taxon' id='t280_first'/>
+						<taxon spec='Taxon' id='t321_first'/>
+						<taxon spec='Taxon' id='t28_first'/>
+						<taxon spec='Taxon' id='t44_first'/>
+						<taxon spec='Taxon' id='t58_first'/>
+						<taxon spec='Taxon' id='t128_first'/>
+						<taxon spec='Taxon' id='t48_first'/>
+						<taxon spec='Taxon' id='t154_first'/>
+						<taxon spec='Taxon' id='t140_first'/>
+						<taxon spec='Taxon' id='t34_first'/>
+						<taxon spec='Taxon' id='t224_first'/>
+						<taxon spec='Taxon' id='t347_first'/>
+						<taxon spec='Taxon' id='t27_first'/>
+						<taxon spec='Taxon' id='t149_first'/>
+						<taxon spec='Taxon' id='t131_first'/>
+						<taxon spec='Taxon' id='t295_first'/>
+						<taxon spec='Taxon' id='t21_first'/>
+						<taxon spec='Taxon' id='t333_first'/>
+						<taxon spec='Taxon' id='t322_first'/>
+						<taxon spec='Taxon' id='t184_first'/>
+						<taxon spec='Taxon' id='t287_first'/>
+						<taxon spec='Taxon' id='t189_first'/>
+						<taxon spec='Taxon' id='t351_first'/>
+						<taxon spec='Taxon' id='t310_first'/>
+						<taxon spec='Taxon' id='t4_first'/>
+						<taxon spec='Taxon' id='t129_first'/>
+						<taxon spec='Taxon' id='t171_first'/>
+						<taxon spec='Taxon' id='t46_first'/>
+						<taxon spec='Taxon' id='t37_first'/>
+						<taxon spec='Taxon' id='t94_first'/>
+						<taxon spec='Taxon' id='t18_first'/>
+						<taxon spec='Taxon' id='t69_first'/>
+						<taxon spec='Taxon' id='t202_first'/>
+						<taxon spec='Taxon' id='t99_first'/>
+						<taxon spec='Taxon' id='t181_first'/>
+						<taxon spec='Taxon' id='t116_first'/>
+						<taxon spec='Taxon' id='t213_first'/>
+						<taxon spec='Taxon' id='t265_first'/>
+						<taxon spec='Taxon' id='t220_first'/>
+						<taxon spec='Taxon' id='t144_first'/>
+						<taxon spec='Taxon' id='t176_first'/>
+						<taxon spec='Taxon' id='t77_first'/>
+						<taxon spec='Taxon' id='t339_first'/>
+						<taxon spec='Taxon' id='t268_first'/>
+						<taxon spec='Taxon' id='t106_first'/>
+						<taxon spec='Taxon' id='t11_first'/>
+						<taxon spec='Taxon' id='t314_first'/>
+						<taxon spec='Taxon' id='t215_first'/>
+						<taxon spec='Taxon' id='t218_first'/>
+						<taxon spec='Taxon' id='t282_first'/>
+						<taxon spec='Taxon' id='t40_first'/>
+						<taxon spec='Taxon' id='t168_first'/>
+						<taxon spec='Taxon' id='t186_first'/>
+						<taxon spec='Taxon' id='t134_first'/>
+						<taxon spec='Taxon' id='t119_first'/>
+						<taxon spec='Taxon' id='t285_first'/>
+						<taxon spec='Taxon' id='t350_first'/>
+						<taxon spec='Taxon' id='t211_first'/>
+						<taxon spec='Taxon' id='t352_first'/>
+						<taxon spec='Taxon' id='t261_first'/>
+						<taxon spec='Taxon' id='t117_first'/>
+						<taxon spec='Taxon' id='t225_first'/>
+						<taxon spec='Taxon' id='t3_first'/>
+						<taxon spec='Taxon' id='t245_first'/>
+						<taxon spec='Taxon' id='t132_first'/>
+						<taxon spec='Taxon' id='t125_first'/>
+						<taxon spec='Taxon' id='t307_first'/>
+						<taxon spec='Taxon' id='t33_first'/>
+						<taxon spec='Taxon' id='t194_first'/>
+						<taxon spec='Taxon' id='t241_first'/>
+						<taxon spec='Taxon' id='t320_first'/>
+						<taxon spec='Taxon' id='t229_first'/>
+						<taxon spec='Taxon' id='t324_first'/>
+						<taxon spec='Taxon' id='t234_first'/>
+						<taxon spec='Taxon' id='t90_first'/>
+						<taxon spec='Taxon' id='t271_first'/>
+						<taxon spec='Taxon' id='t24_first'/>
+						<taxon spec='Taxon' id='t30_first'/>
+						<taxon spec='Taxon' id='t252_first'/>
+						<taxon spec='Taxon' id='t173_first'/>
+						<taxon spec='Taxon' id='t142_first'/>
+						<taxon spec='Taxon' id='t191_first'/>
+						<taxon spec='Taxon' id='t212_first'/>
+						<taxon spec='Taxon' id='t2_first'/>
+						<taxon spec='Taxon' id='t85_first'/>
+						<taxon spec='Taxon' id='t230_first'/>
+						<taxon spec='Taxon' id='t101_first'/>
+						<taxon spec='Taxon' id='t334_first'/>
+						<taxon spec='Taxon' id='t152_first'/>
+                    </taxa>
+                    t137_first=3.80169465478184, t39_first=2.55400268693876, t96_first=0.81625429132648, t164_first=0.239354774977008, t57_first=0, t305_first=0.90529531347434, t226_first=0, t81_first=0, t110_first=1.41532729440589, t338_first=1.65937901396905, t126_first=0.934282291061933, t38_first=0.688397518866959, t104_first=1.53542171125214, t306_first=1.68943360568835, t348_first=1.70186095203936, t88_first=0.790890380913636, t272_first=0.27283402441254, t23_first=0.920174755525351, t335_first=0, t19_first=0, t82_first=0, t93_first=0.385450134421189, t198_first=0, t67_first=0, t296_first=0.17907515104667, t146_first=0, t17_first=0.2050104567622, t121_first=1.18910987828977, t323_first=0.261012976709504, t60_first=0.010264671246191, t327_first=0, t115_first=0, t340_first=0, t130_first=0, t111_first=0, t163_first=0.085457881623832, t26_first=0.230265665467271, t70_first=0, t259_first=0, t298_first=0, t72_first=0, t288_first=0, t231_first=0, t201_first=0.868926725414154, t139_first=1.00745095657728, t177_first=1.06678332195687, t98_first=3.74815439073705, t190_first=3.52825852810826, t286_first=3.17433907850728, t159_first=2.04429690458571, t22_first=2.59725452305336, t204_first=2.4147144152827, t42_first=0.450123820310186, t196_first=0.210322693895087, t216_first=0.511704368972271, t162_first=0.428203020494056, t160_first=0, t52_first=0, t50_first=0, t180_first=0, t283_first=0.947382497662876, t76_first=0.613882834162226, t294_first=0.810555082635658, t179_first=0, t255_first=0, t304_first=0.141252795282998, t75_first=0.783535139516795, t342_first=0.030832423567677, t74_first=0.849644899329256, t341_first=0, t7_first=0, t330_first=0, t289_first=0, t170_first=0.02665474268813, t107_first=0.901457930563717, t175_first=0.515957323731294, t95_first=0.590060783843017, t135_first=0, t14_first=0, t325_first=0.063479341595254, t197_first=0.202548228578937, t297_first=0.12101704567028, t238_first=0.700764308479088, t36_first=0, t113_first=0.517861055135163, t345_first=0, t243_first=0.254322244800269, t148_first=0, t45_first=0.454342901672018, t317_first=0, t108_first=0, t281_first=0, t182_first=0, t167_first=0, t66_first=0, t269_first=0, t6_first=0.754732679056534, t208_first=0, t291_first=0.736057264965625, t235_first=0, t346_first=0, t209_first=0, t102_first=0, t41_first=0, t56_first=0, t120_first=0, t13_first=0.642660329093107, t290_first=0.027932020972425, t200_first=0.089012814337494, t1_first=0.591272689823198, t227_first=1.11514499069025, t12_first=0, t308_first=0, t331_first=0, t35_first=0.088640701528546, t210_first=0, t275_first=0, t217_first=0, t156_first=0.145796193547695, t114_first=0.017899709508264, t329_first=1.10139198197213, t258_first=0.657264861788058, t91_first=0.684728450635169, t332_first=0, t292_first=0.234527783707271, t150_first=0, t151_first=0.059517115740991, t203_first=0, t263_first=0, t55_first=0, t61_first=0.808805384088528, t65_first=1.7758561846628, t293_first=0, t223_first=0, t178_first=0, t315_first=0.142596324851799, t280_first=0, t321_first=0.336623364731714, t28_first=0.525615662297786, t44_first=0.907087505020316, t58_first=0.23479471828738, t128_first=0, t48_first=0, t154_first=0.323041968093528, t140_first=1.52123954197737, t34_first=0, t224_first=0, t347_first=0, t27_first=0, t149_first=0, t131_first=1.10895134584768, t295_first=1.46902656027933, t21_first=2.02891894227234, t333_first=1.51371985647871, t322_first=1.23677672188346, t184_first=1.3807275446363, t287_first=0.264948057911719, t189_first=0, t351_first=0, t310_first=1.68793835915815, t4_first=0.905310280695395, t129_first=0, t171_first=0.219658607679083, t46_first=0, t37_first=0, t94_first=0, t18_first=0.098206722129384, t69_first=0, t202_first=0, t99_first=0, t181_first=0.452739779043181, t116_first=0, t213_first=0, t265_first=0, t220_first=0, t144_first=0, t176_first=0, t77_first=0, t339_first=0.004370177118036, t268_first=0.307647112291764, t106_first=0, t11_first=0, t314_first=0, t215_first=0, t218_first=0.325309703250527, t282_first=0, t40_first=0, t168_first=0.442505711243289, t186_first=0.270307489673501, t134_first=0.792688858161203, t119_first=1.04370192382827, t285_first=1.71304578773529, t350_first=1.58363660658294, t211_first=0.24565430030132, t352_first=0.389310306907657, t261_first=0.085330178856855, t117_first=0, t225_first=0, t3_first=0, t245_first=0.017244035498218, t132_first=0.102641657755719, t125_first=0, t307_first=1.17216760898745, t33_first=0, t194_first=0, t241_first=0, t320_first=0.438104738691635, t229_first=0.352297659897344, t324_first=0.517523083425317, t234_first=0, t90_first=0, t271_first=0, t24_first=0, t30_first=0, t252_first=0, t173_first=0, t142_first=0, t191_first=0, t212_first=0, t2_first=0, t85_first=0.756769029798163, t230_first=1.53989129736449, t101_first=2.49676433388105, t334_first=3.91923106585783, t152_first=3.78239236906465
+                </trait>
+                <taxonset idref="taxonSet" />
+                <stratigraphicRange id="r0" spec="StratigraphicRange" firstOccurrence="@t137_first" lastOccurrence="@t137_first"/>
+				<stratigraphicRange id="r1" spec="StratigraphicRange" firstOccurrence="@t39_first" lastOccurrence="@t39_first"/>
+				<stratigraphicRange id="r2" spec="StratigraphicRange" firstOccurrence="@t96_first" lastOccurrence="@t96_first"/>
+				<stratigraphicRange id="r3" spec="StratigraphicRange" firstOccurrence="@t164_first" lastOccurrence="@t164_first"/>
+				<stratigraphicRange id="r4" spec="StratigraphicRange" firstOccurrence="@t57_first" lastOccurrence="@t57_first"/>
+				<stratigraphicRange id="r5" spec="StratigraphicRange" firstOccurrence="@t305_first" lastOccurrence="@t305_first"/>
+				<stratigraphicRange id="r6" spec="StratigraphicRange" firstOccurrence="@t226_first" lastOccurrence="@t226_first"/>
+				<stratigraphicRange id="r7" spec="StratigraphicRange" firstOccurrence="@t81_first" lastOccurrence="@t81_first"/>
+				<stratigraphicRange id="r8" spec="StratigraphicRange" firstOccurrence="@t110_first" lastOccurrence="@t110_first"/>
+				<stratigraphicRange id="r9" spec="StratigraphicRange" firstOccurrence="@t338_first" lastOccurrence="@t338_first"/>
+				<stratigraphicRange id="r10" spec="StratigraphicRange" firstOccurrence="@t126_first" lastOccurrence="@t126_first"/>
+				<stratigraphicRange id="r11" spec="StratigraphicRange" firstOccurrence="@t38_first" lastOccurrence="@t38_first"/>
+				<stratigraphicRange id="r12" spec="StratigraphicRange" firstOccurrence="@t104_first" lastOccurrence="@t104_first"/>
+				<stratigraphicRange id="r13" spec="StratigraphicRange" firstOccurrence="@t306_first" lastOccurrence="@t306_first"/>
+				<stratigraphicRange id="r14" spec="StratigraphicRange" firstOccurrence="@t348_first" lastOccurrence="@t348_first"/>
+				<stratigraphicRange id="r15" spec="StratigraphicRange" firstOccurrence="@t88_first" lastOccurrence="@t88_first"/>
+				<stratigraphicRange id="r16" spec="StratigraphicRange" firstOccurrence="@t272_first" lastOccurrence="@t272_first"/>
+				<stratigraphicRange id="r17" spec="StratigraphicRange" firstOccurrence="@t23_first" lastOccurrence="@t23_first"/>
+				<stratigraphicRange id="r18" spec="StratigraphicRange" firstOccurrence="@t335_first" lastOccurrence="@t335_first"/>
+				<stratigraphicRange id="r19" spec="StratigraphicRange" firstOccurrence="@t19_first" lastOccurrence="@t19_first"/>
+				<stratigraphicRange id="r20" spec="StratigraphicRange" firstOccurrence="@t82_first" lastOccurrence="@t82_first"/>
+				<stratigraphicRange id="r21" spec="StratigraphicRange" firstOccurrence="@t93_first" lastOccurrence="@t93_first"/>
+				<stratigraphicRange id="r22" spec="StratigraphicRange" firstOccurrence="@t198_first" lastOccurrence="@t198_first"/>
+				<stratigraphicRange id="r23" spec="StratigraphicRange" firstOccurrence="@t67_first" lastOccurrence="@t67_first"/>
+				<stratigraphicRange id="r24" spec="StratigraphicRange" firstOccurrence="@t296_first" lastOccurrence="@t296_first"/>
+				<stratigraphicRange id="r25" spec="StratigraphicRange" firstOccurrence="@t146_first" lastOccurrence="@t146_first"/>
+				<stratigraphicRange id="r26" spec="StratigraphicRange" firstOccurrence="@t17_first" lastOccurrence="@t17_first"/>
+				<stratigraphicRange id="r27" spec="StratigraphicRange" firstOccurrence="@t121_first" lastOccurrence="@t121_first"/>
+				<stratigraphicRange id="r28" spec="StratigraphicRange" firstOccurrence="@t323_first" lastOccurrence="@t323_first"/>
+				<stratigraphicRange id="r29" spec="StratigraphicRange" firstOccurrence="@t60_first" lastOccurrence="@t60_first"/>
+				<stratigraphicRange id="r30" spec="StratigraphicRange" firstOccurrence="@t327_first" lastOccurrence="@t327_first"/>
+				<stratigraphicRange id="r31" spec="StratigraphicRange" firstOccurrence="@t115_first" lastOccurrence="@t115_first"/>
+				<stratigraphicRange id="r32" spec="StratigraphicRange" firstOccurrence="@t340_first" lastOccurrence="@t340_first"/>
+				<stratigraphicRange id="r33" spec="StratigraphicRange" firstOccurrence="@t130_first" lastOccurrence="@t130_first"/>
+				<stratigraphicRange id="r34" spec="StratigraphicRange" firstOccurrence="@t111_first" lastOccurrence="@t111_first"/>
+				<stratigraphicRange id="r35" spec="StratigraphicRange" firstOccurrence="@t163_first" lastOccurrence="@t163_first"/>
+				<stratigraphicRange id="r36" spec="StratigraphicRange" firstOccurrence="@t26_first" lastOccurrence="@t26_first"/>
+				<stratigraphicRange id="r37" spec="StratigraphicRange" firstOccurrence="@t70_first" lastOccurrence="@t70_first"/>
+				<stratigraphicRange id="r38" spec="StratigraphicRange" firstOccurrence="@t259_first" lastOccurrence="@t259_first"/>
+				<stratigraphicRange id="r39" spec="StratigraphicRange" firstOccurrence="@t298_first" lastOccurrence="@t298_first"/>
+				<stratigraphicRange id="r40" spec="StratigraphicRange" firstOccurrence="@t72_first" lastOccurrence="@t72_first"/>
+				<stratigraphicRange id="r41" spec="StratigraphicRange" firstOccurrence="@t288_first" lastOccurrence="@t288_first"/>
+				<stratigraphicRange id="r42" spec="StratigraphicRange" firstOccurrence="@t231_first" lastOccurrence="@t231_first"/>
+				<stratigraphicRange id="r43" spec="StratigraphicRange" firstOccurrence="@t201_first" lastOccurrence="@t201_first"/>
+				<stratigraphicRange id="r44" spec="StratigraphicRange" firstOccurrence="@t139_first" lastOccurrence="@t139_first"/>
+				<stratigraphicRange id="r45" spec="StratigraphicRange" firstOccurrence="@t177_first" lastOccurrence="@t177_first"/>
+				<stratigraphicRange id="r46" spec="StratigraphicRange" firstOccurrence="@t98_first" lastOccurrence="@t98_first"/>
+				<stratigraphicRange id="r47" spec="StratigraphicRange" firstOccurrence="@t190_first" lastOccurrence="@t190_first"/>
+				<stratigraphicRange id="r48" spec="StratigraphicRange" firstOccurrence="@t286_first" lastOccurrence="@t286_first"/>
+				<stratigraphicRange id="r49" spec="StratigraphicRange" firstOccurrence="@t159_first" lastOccurrence="@t159_first"/>
+				<stratigraphicRange id="r50" spec="StratigraphicRange" firstOccurrence="@t22_first" lastOccurrence="@t22_first"/>
+				<stratigraphicRange id="r51" spec="StratigraphicRange" firstOccurrence="@t204_first" lastOccurrence="@t204_first"/>
+				<stratigraphicRange id="r52" spec="StratigraphicRange" firstOccurrence="@t42_first" lastOccurrence="@t42_first"/>
+				<stratigraphicRange id="r53" spec="StratigraphicRange" firstOccurrence="@t196_first" lastOccurrence="@t196_first"/>
+				<stratigraphicRange id="r54" spec="StratigraphicRange" firstOccurrence="@t216_first" lastOccurrence="@t216_first"/>
+				<stratigraphicRange id="r55" spec="StratigraphicRange" firstOccurrence="@t162_first" lastOccurrence="@t162_first"/>
+				<stratigraphicRange id="r56" spec="StratigraphicRange" firstOccurrence="@t160_first" lastOccurrence="@t160_first"/>
+				<stratigraphicRange id="r57" spec="StratigraphicRange" firstOccurrence="@t52_first" lastOccurrence="@t52_first"/>
+				<stratigraphicRange id="r58" spec="StratigraphicRange" firstOccurrence="@t50_first" lastOccurrence="@t50_first"/>
+				<stratigraphicRange id="r59" spec="StratigraphicRange" firstOccurrence="@t180_first" lastOccurrence="@t180_first"/>
+				<stratigraphicRange id="r60" spec="StratigraphicRange" firstOccurrence="@t283_first" lastOccurrence="@t283_first"/>
+				<stratigraphicRange id="r61" spec="StratigraphicRange" firstOccurrence="@t76_first" lastOccurrence="@t76_first"/>
+				<stratigraphicRange id="r62" spec="StratigraphicRange" firstOccurrence="@t294_first" lastOccurrence="@t294_first"/>
+				<stratigraphicRange id="r63" spec="StratigraphicRange" firstOccurrence="@t179_first" lastOccurrence="@t179_first"/>
+				<stratigraphicRange id="r64" spec="StratigraphicRange" firstOccurrence="@t255_first" lastOccurrence="@t255_first"/>
+				<stratigraphicRange id="r65" spec="StratigraphicRange" firstOccurrence="@t304_first" lastOccurrence="@t304_first"/>
+				<stratigraphicRange id="r66" spec="StratigraphicRange" firstOccurrence="@t75_first" lastOccurrence="@t75_first"/>
+				<stratigraphicRange id="r67" spec="StratigraphicRange" firstOccurrence="@t342_first" lastOccurrence="@t342_first"/>
+				<stratigraphicRange id="r68" spec="StratigraphicRange" firstOccurrence="@t74_first" lastOccurrence="@t74_first"/>
+				<stratigraphicRange id="r69" spec="StratigraphicRange" firstOccurrence="@t341_first" lastOccurrence="@t341_first"/>
+				<stratigraphicRange id="r70" spec="StratigraphicRange" firstOccurrence="@t7_first" lastOccurrence="@t7_first"/>
+				<stratigraphicRange id="r71" spec="StratigraphicRange" firstOccurrence="@t330_first" lastOccurrence="@t330_first"/>
+				<stratigraphicRange id="r72" spec="StratigraphicRange" firstOccurrence="@t289_first" lastOccurrence="@t289_first"/>
+				<stratigraphicRange id="r73" spec="StratigraphicRange" firstOccurrence="@t170_first" lastOccurrence="@t170_first"/>
+				<stratigraphicRange id="r74" spec="StratigraphicRange" firstOccurrence="@t107_first" lastOccurrence="@t107_first"/>
+				<stratigraphicRange id="r75" spec="StratigraphicRange" firstOccurrence="@t175_first" lastOccurrence="@t175_first"/>
+				<stratigraphicRange id="r76" spec="StratigraphicRange" firstOccurrence="@t95_first" lastOccurrence="@t95_first"/>
+				<stratigraphicRange id="r77" spec="StratigraphicRange" firstOccurrence="@t135_first" lastOccurrence="@t135_first"/>
+				<stratigraphicRange id="r78" spec="StratigraphicRange" firstOccurrence="@t14_first" lastOccurrence="@t14_first"/>
+				<stratigraphicRange id="r79" spec="StratigraphicRange" firstOccurrence="@t325_first" lastOccurrence="@t325_first"/>
+				<stratigraphicRange id="r80" spec="StratigraphicRange" firstOccurrence="@t197_first" lastOccurrence="@t197_first"/>
+				<stratigraphicRange id="r81" spec="StratigraphicRange" firstOccurrence="@t297_first" lastOccurrence="@t297_first"/>
+				<stratigraphicRange id="r82" spec="StratigraphicRange" firstOccurrence="@t238_first" lastOccurrence="@t238_first"/>
+				<stratigraphicRange id="r83" spec="StratigraphicRange" firstOccurrence="@t36_first" lastOccurrence="@t36_first"/>
+				<stratigraphicRange id="r84" spec="StratigraphicRange" firstOccurrence="@t113_first" lastOccurrence="@t113_first"/>
+				<stratigraphicRange id="r85" spec="StratigraphicRange" firstOccurrence="@t345_first" lastOccurrence="@t345_first"/>
+				<stratigraphicRange id="r86" spec="StratigraphicRange" firstOccurrence="@t243_first" lastOccurrence="@t243_first"/>
+				<stratigraphicRange id="r87" spec="StratigraphicRange" firstOccurrence="@t148_first" lastOccurrence="@t148_first"/>
+				<stratigraphicRange id="r88" spec="StratigraphicRange" firstOccurrence="@t45_first" lastOccurrence="@t45_first"/>
+				<stratigraphicRange id="r89" spec="StratigraphicRange" firstOccurrence="@t317_first" lastOccurrence="@t317_first"/>
+				<stratigraphicRange id="r90" spec="StratigraphicRange" firstOccurrence="@t108_first" lastOccurrence="@t108_first"/>
+				<stratigraphicRange id="r91" spec="StratigraphicRange" firstOccurrence="@t281_first" lastOccurrence="@t281_first"/>
+				<stratigraphicRange id="r92" spec="StratigraphicRange" firstOccurrence="@t182_first" lastOccurrence="@t182_first"/>
+				<stratigraphicRange id="r93" spec="StratigraphicRange" firstOccurrence="@t167_first" lastOccurrence="@t167_first"/>
+				<stratigraphicRange id="r94" spec="StratigraphicRange" firstOccurrence="@t66_first" lastOccurrence="@t66_first"/>
+				<stratigraphicRange id="r95" spec="StratigraphicRange" firstOccurrence="@t269_first" lastOccurrence="@t269_first"/>
+				<stratigraphicRange id="r96" spec="StratigraphicRange" firstOccurrence="@t6_first" lastOccurrence="@t6_first"/>
+				<stratigraphicRange id="r97" spec="StratigraphicRange" firstOccurrence="@t208_first" lastOccurrence="@t208_first"/>
+				<stratigraphicRange id="r98" spec="StratigraphicRange" firstOccurrence="@t291_first" lastOccurrence="@t291_first"/>
+				<stratigraphicRange id="r99" spec="StratigraphicRange" firstOccurrence="@t235_first" lastOccurrence="@t235_first"/>
+				<stratigraphicRange id="r100" spec="StratigraphicRange" firstOccurrence="@t346_first" lastOccurrence="@t346_first"/>
+				<stratigraphicRange id="r101" spec="StratigraphicRange" firstOccurrence="@t209_first" lastOccurrence="@t209_first"/>
+				<stratigraphicRange id="r102" spec="StratigraphicRange" firstOccurrence="@t102_first" lastOccurrence="@t102_first"/>
+				<stratigraphicRange id="r103" spec="StratigraphicRange" firstOccurrence="@t41_first" lastOccurrence="@t41_first"/>
+				<stratigraphicRange id="r104" spec="StratigraphicRange" firstOccurrence="@t56_first" lastOccurrence="@t56_first"/>
+				<stratigraphicRange id="r105" spec="StratigraphicRange" firstOccurrence="@t120_first" lastOccurrence="@t120_first"/>
+				<stratigraphicRange id="r106" spec="StratigraphicRange" firstOccurrence="@t13_first" lastOccurrence="@t13_first"/>
+				<stratigraphicRange id="r107" spec="StratigraphicRange" firstOccurrence="@t290_first" lastOccurrence="@t290_first"/>
+				<stratigraphicRange id="r108" spec="StratigraphicRange" firstOccurrence="@t200_first" lastOccurrence="@t200_first"/>
+				<stratigraphicRange id="r109" spec="StratigraphicRange" firstOccurrence="@t1_first" lastOccurrence="@t1_first"/>
+				<stratigraphicRange id="r110" spec="StratigraphicRange" firstOccurrence="@t227_first" lastOccurrence="@t227_first"/>
+				<stratigraphicRange id="r111" spec="StratigraphicRange" firstOccurrence="@t12_first" lastOccurrence="@t12_first"/>
+				<stratigraphicRange id="r112" spec="StratigraphicRange" firstOccurrence="@t308_first" lastOccurrence="@t308_first"/>
+				<stratigraphicRange id="r113" spec="StratigraphicRange" firstOccurrence="@t331_first" lastOccurrence="@t331_first"/>
+				<stratigraphicRange id="r114" spec="StratigraphicRange" firstOccurrence="@t35_first" lastOccurrence="@t35_first"/>
+				<stratigraphicRange id="r115" spec="StratigraphicRange" firstOccurrence="@t210_first" lastOccurrence="@t210_first"/>
+				<stratigraphicRange id="r116" spec="StratigraphicRange" firstOccurrence="@t275_first" lastOccurrence="@t275_first"/>
+				<stratigraphicRange id="r117" spec="StratigraphicRange" firstOccurrence="@t217_first" lastOccurrence="@t217_first"/>
+				<stratigraphicRange id="r118" spec="StratigraphicRange" firstOccurrence="@t156_first" lastOccurrence="@t156_first"/>
+				<stratigraphicRange id="r119" spec="StratigraphicRange" firstOccurrence="@t114_first" lastOccurrence="@t114_first"/>
+				<stratigraphicRange id="r120" spec="StratigraphicRange" firstOccurrence="@t329_first" lastOccurrence="@t329_first"/>
+				<stratigraphicRange id="r121" spec="StratigraphicRange" firstOccurrence="@t258_first" lastOccurrence="@t258_first"/>
+				<stratigraphicRange id="r122" spec="StratigraphicRange" firstOccurrence="@t91_first" lastOccurrence="@t91_first"/>
+				<stratigraphicRange id="r123" spec="StratigraphicRange" firstOccurrence="@t332_first" lastOccurrence="@t332_first"/>
+				<stratigraphicRange id="r124" spec="StratigraphicRange" firstOccurrence="@t292_first" lastOccurrence="@t292_first"/>
+				<stratigraphicRange id="r125" spec="StratigraphicRange" firstOccurrence="@t150_first" lastOccurrence="@t150_first"/>
+				<stratigraphicRange id="r126" spec="StratigraphicRange" firstOccurrence="@t151_first" lastOccurrence="@t151_first"/>
+				<stratigraphicRange id="r127" spec="StratigraphicRange" firstOccurrence="@t203_first" lastOccurrence="@t203_first"/>
+				<stratigraphicRange id="r128" spec="StratigraphicRange" firstOccurrence="@t263_first" lastOccurrence="@t263_first"/>
+				<stratigraphicRange id="r129" spec="StratigraphicRange" firstOccurrence="@t55_first" lastOccurrence="@t55_first"/>
+				<stratigraphicRange id="r130" spec="StratigraphicRange" firstOccurrence="@t61_first" lastOccurrence="@t61_first"/>
+				<stratigraphicRange id="r131" spec="StratigraphicRange" firstOccurrence="@t65_first" lastOccurrence="@t65_first"/>
+				<stratigraphicRange id="r132" spec="StratigraphicRange" firstOccurrence="@t293_first" lastOccurrence="@t293_first"/>
+				<stratigraphicRange id="r133" spec="StratigraphicRange" firstOccurrence="@t223_first" lastOccurrence="@t223_first"/>
+				<stratigraphicRange id="r134" spec="StratigraphicRange" firstOccurrence="@t178_first" lastOccurrence="@t178_first"/>
+				<stratigraphicRange id="r135" spec="StratigraphicRange" firstOccurrence="@t315_first" lastOccurrence="@t315_first"/>
+				<stratigraphicRange id="r136" spec="StratigraphicRange" firstOccurrence="@t280_first" lastOccurrence="@t280_first"/>
+				<stratigraphicRange id="r137" spec="StratigraphicRange" firstOccurrence="@t321_first" lastOccurrence="@t321_first"/>
+				<stratigraphicRange id="r138" spec="StratigraphicRange" firstOccurrence="@t28_first" lastOccurrence="@t28_first"/>
+				<stratigraphicRange id="r139" spec="StratigraphicRange" firstOccurrence="@t44_first" lastOccurrence="@t44_first"/>
+				<stratigraphicRange id="r140" spec="StratigraphicRange" firstOccurrence="@t58_first" lastOccurrence="@t58_first"/>
+				<stratigraphicRange id="r141" spec="StratigraphicRange" firstOccurrence="@t128_first" lastOccurrence="@t128_first"/>
+				<stratigraphicRange id="r142" spec="StratigraphicRange" firstOccurrence="@t48_first" lastOccurrence="@t48_first"/>
+				<stratigraphicRange id="r143" spec="StratigraphicRange" firstOccurrence="@t154_first" lastOccurrence="@t154_first"/>
+				<stratigraphicRange id="r144" spec="StratigraphicRange" firstOccurrence="@t140_first" lastOccurrence="@t140_first"/>
+				<stratigraphicRange id="r145" spec="StratigraphicRange" firstOccurrence="@t34_first" lastOccurrence="@t34_first"/>
+				<stratigraphicRange id="r146" spec="StratigraphicRange" firstOccurrence="@t224_first" lastOccurrence="@t224_first"/>
+				<stratigraphicRange id="r147" spec="StratigraphicRange" firstOccurrence="@t347_first" lastOccurrence="@t347_first"/>
+				<stratigraphicRange id="r148" spec="StratigraphicRange" firstOccurrence="@t27_first" lastOccurrence="@t27_first"/>
+				<stratigraphicRange id="r149" spec="StratigraphicRange" firstOccurrence="@t149_first" lastOccurrence="@t149_first"/>
+				<stratigraphicRange id="r150" spec="StratigraphicRange" firstOccurrence="@t131_first" lastOccurrence="@t131_first"/>
+				<stratigraphicRange id="r151" spec="StratigraphicRange" firstOccurrence="@t295_first" lastOccurrence="@t295_first"/>
+				<stratigraphicRange id="r152" spec="StratigraphicRange" firstOccurrence="@t21_first" lastOccurrence="@t21_first"/>
+				<stratigraphicRange id="r153" spec="StratigraphicRange" firstOccurrence="@t333_first" lastOccurrence="@t333_first"/>
+				<stratigraphicRange id="r154" spec="StratigraphicRange" firstOccurrence="@t322_first" lastOccurrence="@t322_first"/>
+				<stratigraphicRange id="r155" spec="StratigraphicRange" firstOccurrence="@t184_first" lastOccurrence="@t184_first"/>
+				<stratigraphicRange id="r156" spec="StratigraphicRange" firstOccurrence="@t287_first" lastOccurrence="@t287_first"/>
+				<stratigraphicRange id="r157" spec="StratigraphicRange" firstOccurrence="@t189_first" lastOccurrence="@t189_first"/>
+				<stratigraphicRange id="r158" spec="StratigraphicRange" firstOccurrence="@t351_first" lastOccurrence="@t351_first"/>
+				<stratigraphicRange id="r159" spec="StratigraphicRange" firstOccurrence="@t310_first" lastOccurrence="@t310_first"/>
+				<stratigraphicRange id="r160" spec="StratigraphicRange" firstOccurrence="@t4_first" lastOccurrence="@t4_first"/>
+				<stratigraphicRange id="r161" spec="StratigraphicRange" firstOccurrence="@t129_first" lastOccurrence="@t129_first"/>
+				<stratigraphicRange id="r162" spec="StratigraphicRange" firstOccurrence="@t171_first" lastOccurrence="@t171_first"/>
+				<stratigraphicRange id="r163" spec="StratigraphicRange" firstOccurrence="@t46_first" lastOccurrence="@t46_first"/>
+				<stratigraphicRange id="r164" spec="StratigraphicRange" firstOccurrence="@t37_first" lastOccurrence="@t37_first"/>
+				<stratigraphicRange id="r165" spec="StratigraphicRange" firstOccurrence="@t94_first" lastOccurrence="@t94_first"/>
+				<stratigraphicRange id="r166" spec="StratigraphicRange" firstOccurrence="@t18_first" lastOccurrence="@t18_first"/>
+				<stratigraphicRange id="r167" spec="StratigraphicRange" firstOccurrence="@t69_first" lastOccurrence="@t69_first"/>
+				<stratigraphicRange id="r168" spec="StratigraphicRange" firstOccurrence="@t202_first" lastOccurrence="@t202_first"/>
+				<stratigraphicRange id="r169" spec="StratigraphicRange" firstOccurrence="@t99_first" lastOccurrence="@t99_first"/>
+				<stratigraphicRange id="r170" spec="StratigraphicRange" firstOccurrence="@t181_first" lastOccurrence="@t181_first"/>
+				<stratigraphicRange id="r171" spec="StratigraphicRange" firstOccurrence="@t116_first" lastOccurrence="@t116_first"/>
+				<stratigraphicRange id="r172" spec="StratigraphicRange" firstOccurrence="@t213_first" lastOccurrence="@t213_first"/>
+				<stratigraphicRange id="r173" spec="StratigraphicRange" firstOccurrence="@t265_first" lastOccurrence="@t265_first"/>
+				<stratigraphicRange id="r174" spec="StratigraphicRange" firstOccurrence="@t220_first" lastOccurrence="@t220_first"/>
+				<stratigraphicRange id="r175" spec="StratigraphicRange" firstOccurrence="@t144_first" lastOccurrence="@t144_first"/>
+				<stratigraphicRange id="r176" spec="StratigraphicRange" firstOccurrence="@t176_first" lastOccurrence="@t176_first"/>
+				<stratigraphicRange id="r177" spec="StratigraphicRange" firstOccurrence="@t77_first" lastOccurrence="@t77_first"/>
+				<stratigraphicRange id="r178" spec="StratigraphicRange" firstOccurrence="@t339_first" lastOccurrence="@t339_first"/>
+				<stratigraphicRange id="r179" spec="StratigraphicRange" firstOccurrence="@t268_first" lastOccurrence="@t268_first"/>
+				<stratigraphicRange id="r180" spec="StratigraphicRange" firstOccurrence="@t106_first" lastOccurrence="@t106_first"/>
+				<stratigraphicRange id="r181" spec="StratigraphicRange" firstOccurrence="@t11_first" lastOccurrence="@t11_first"/>
+				<stratigraphicRange id="r182" spec="StratigraphicRange" firstOccurrence="@t314_first" lastOccurrence="@t314_first"/>
+				<stratigraphicRange id="r183" spec="StratigraphicRange" firstOccurrence="@t215_first" lastOccurrence="@t215_first"/>
+				<stratigraphicRange id="r184" spec="StratigraphicRange" firstOccurrence="@t218_first" lastOccurrence="@t218_first"/>
+				<stratigraphicRange id="r185" spec="StratigraphicRange" firstOccurrence="@t282_first" lastOccurrence="@t282_first"/>
+				<stratigraphicRange id="r186" spec="StratigraphicRange" firstOccurrence="@t40_first" lastOccurrence="@t40_first"/>
+				<stratigraphicRange id="r187" spec="StratigraphicRange" firstOccurrence="@t168_first" lastOccurrence="@t168_first"/>
+				<stratigraphicRange id="r188" spec="StratigraphicRange" firstOccurrence="@t186_first" lastOccurrence="@t186_first"/>
+				<stratigraphicRange id="r189" spec="StratigraphicRange" firstOccurrence="@t134_first" lastOccurrence="@t134_first"/>
+				<stratigraphicRange id="r190" spec="StratigraphicRange" firstOccurrence="@t119_first" lastOccurrence="@t119_first"/>
+				<stratigraphicRange id="r191" spec="StratigraphicRange" firstOccurrence="@t285_first" lastOccurrence="@t285_first"/>
+				<stratigraphicRange id="r192" spec="StratigraphicRange" firstOccurrence="@t350_first" lastOccurrence="@t350_first"/>
+				<stratigraphicRange id="r193" spec="StratigraphicRange" firstOccurrence="@t211_first" lastOccurrence="@t211_first"/>
+				<stratigraphicRange id="r194" spec="StratigraphicRange" firstOccurrence="@t352_first" lastOccurrence="@t352_first"/>
+				<stratigraphicRange id="r195" spec="StratigraphicRange" firstOccurrence="@t261_first" lastOccurrence="@t261_first"/>
+				<stratigraphicRange id="r196" spec="StratigraphicRange" firstOccurrence="@t117_first" lastOccurrence="@t117_first"/>
+				<stratigraphicRange id="r197" spec="StratigraphicRange" firstOccurrence="@t225_first" lastOccurrence="@t225_first"/>
+				<stratigraphicRange id="r198" spec="StratigraphicRange" firstOccurrence="@t3_first" lastOccurrence="@t3_first"/>
+				<stratigraphicRange id="r199" spec="StratigraphicRange" firstOccurrence="@t245_first" lastOccurrence="@t245_first"/>
+				<stratigraphicRange id="r200" spec="StratigraphicRange" firstOccurrence="@t132_first" lastOccurrence="@t132_first"/>
+				<stratigraphicRange id="r201" spec="StratigraphicRange" firstOccurrence="@t125_first" lastOccurrence="@t125_first"/>
+				<stratigraphicRange id="r202" spec="StratigraphicRange" firstOccurrence="@t307_first" lastOccurrence="@t307_first"/>
+				<stratigraphicRange id="r203" spec="StratigraphicRange" firstOccurrence="@t33_first" lastOccurrence="@t33_first"/>
+				<stratigraphicRange id="r204" spec="StratigraphicRange" firstOccurrence="@t194_first" lastOccurrence="@t194_first"/>
+				<stratigraphicRange id="r205" spec="StratigraphicRange" firstOccurrence="@t241_first" lastOccurrence="@t241_first"/>
+				<stratigraphicRange id="r206" spec="StratigraphicRange" firstOccurrence="@t320_first" lastOccurrence="@t320_first"/>
+				<stratigraphicRange id="r207" spec="StratigraphicRange" firstOccurrence="@t229_first" lastOccurrence="@t229_first"/>
+				<stratigraphicRange id="r208" spec="StratigraphicRange" firstOccurrence="@t324_first" lastOccurrence="@t324_first"/>
+				<stratigraphicRange id="r209" spec="StratigraphicRange" firstOccurrence="@t234_first" lastOccurrence="@t234_first"/>
+				<stratigraphicRange id="r210" spec="StratigraphicRange" firstOccurrence="@t90_first" lastOccurrence="@t90_first"/>
+				<stratigraphicRange id="r211" spec="StratigraphicRange" firstOccurrence="@t271_first" lastOccurrence="@t271_first"/>
+				<stratigraphicRange id="r212" spec="StratigraphicRange" firstOccurrence="@t24_first" lastOccurrence="@t24_first"/>
+				<stratigraphicRange id="r213" spec="StratigraphicRange" firstOccurrence="@t30_first" lastOccurrence="@t30_first"/>
+				<stratigraphicRange id="r214" spec="StratigraphicRange" firstOccurrence="@t252_first" lastOccurrence="@t252_first"/>
+				<stratigraphicRange id="r215" spec="StratigraphicRange" firstOccurrence="@t173_first" lastOccurrence="@t173_first"/>
+				<stratigraphicRange id="r216" spec="StratigraphicRange" firstOccurrence="@t142_first" lastOccurrence="@t142_first"/>
+				<stratigraphicRange id="r217" spec="StratigraphicRange" firstOccurrence="@t191_first" lastOccurrence="@t191_first"/>
+				<stratigraphicRange id="r218" spec="StratigraphicRange" firstOccurrence="@t212_first" lastOccurrence="@t212_first"/>
+				<stratigraphicRange id="r219" spec="StratigraphicRange" firstOccurrence="@t2_first" lastOccurrence="@t2_first"/>
+				<stratigraphicRange id="r220" spec="StratigraphicRange" firstOccurrence="@t85_first" lastOccurrence="@t85_first"/>
+				<stratigraphicRange id="r221" spec="StratigraphicRange" firstOccurrence="@t230_first" lastOccurrence="@t230_first"/>
+				<stratigraphicRange id="r222" spec="StratigraphicRange" firstOccurrence="@t101_first" lastOccurrence="@t101_first"/>
+				<stratigraphicRange id="r223" spec="StratigraphicRange" firstOccurrence="@t334_first" lastOccurrence="@t334_first"/>
+				<stratigraphicRange id="r224" spec="StratigraphicRange" firstOccurrence="@t152_first" lastOccurrence="@t152_first"/>
+            </tree>
+            <parameter id='origin' lower='0.0'
+                                name='stateNode'>359.989672560437</parameter>
+            <parameter id='netDiversification' lower='0.0'
+                                name='stateNode'>0.795721481274813</parameter>
+            <parameter id='turnOver' lower='0.' upper = '1.'
+                                name='stateNode'>0.271067841351032</parameter>
+            <parameter id='samplingProportion' lower='0.0'
+                                name='stateNode'>0.754122827015817</parameter>
+            <parameter id='rho' lower='0.0'
+                                name='stateNode'>0.869864166365005</parameter>
+        </state>
+
+        <init estimate="false" id="Randomtree" initial="@tree" spec="RandomSRangeTree" nodetype="sr.evolution.tree.SRNode" taxonset="@taxonSet">
+            <populationModel id="ConstantPopulation0.t" spec="ConstantPopulation">
+                <parameter id="randomPopSize.t" name="popSize">1.0</parameter>
+            </populationModel>
+            <stratigraphicRange idref="r0"/>
+			<stratigraphicRange idref="r1"/>
+			<stratigraphicRange idref="r2"/>
+			<stratigraphicRange idref="r3"/>
+			<stratigraphicRange idref="r4"/>
+			<stratigraphicRange idref="r5"/>
+			<stratigraphicRange idref="r6"/>
+			<stratigraphicRange idref="r7"/>
+			<stratigraphicRange idref="r8"/>
+			<stratigraphicRange idref="r9"/>
+			<stratigraphicRange idref="r10"/>
+			<stratigraphicRange idref="r11"/>
+			<stratigraphicRange idref="r12"/>
+			<stratigraphicRange idref="r13"/>
+			<stratigraphicRange idref="r14"/>
+			<stratigraphicRange idref="r15"/>
+			<stratigraphicRange idref="r16"/>
+			<stratigraphicRange idref="r17"/>
+			<stratigraphicRange idref="r18"/>
+			<stratigraphicRange idref="r19"/>
+			<stratigraphicRange idref="r20"/>
+			<stratigraphicRange idref="r21"/>
+			<stratigraphicRange idref="r22"/>
+			<stratigraphicRange idref="r23"/>
+			<stratigraphicRange idref="r24"/>
+			<stratigraphicRange idref="r25"/>
+			<stratigraphicRange idref="r26"/>
+			<stratigraphicRange idref="r27"/>
+			<stratigraphicRange idref="r28"/>
+			<stratigraphicRange idref="r29"/>
+			<stratigraphicRange idref="r30"/>
+			<stratigraphicRange idref="r31"/>
+			<stratigraphicRange idref="r32"/>
+			<stratigraphicRange idref="r33"/>
+			<stratigraphicRange idref="r34"/>
+			<stratigraphicRange idref="r35"/>
+			<stratigraphicRange idref="r36"/>
+			<stratigraphicRange idref="r37"/>
+			<stratigraphicRange idref="r38"/>
+			<stratigraphicRange idref="r39"/>
+			<stratigraphicRange idref="r40"/>
+			<stratigraphicRange idref="r41"/>
+			<stratigraphicRange idref="r42"/>
+			<stratigraphicRange idref="r43"/>
+			<stratigraphicRange idref="r44"/>
+			<stratigraphicRange idref="r45"/>
+			<stratigraphicRange idref="r46"/>
+			<stratigraphicRange idref="r47"/>
+			<stratigraphicRange idref="r48"/>
+			<stratigraphicRange idref="r49"/>
+			<stratigraphicRange idref="r50"/>
+			<stratigraphicRange idref="r51"/>
+			<stratigraphicRange idref="r52"/>
+			<stratigraphicRange idref="r53"/>
+			<stratigraphicRange idref="r54"/>
+			<stratigraphicRange idref="r55"/>
+			<stratigraphicRange idref="r56"/>
+			<stratigraphicRange idref="r57"/>
+			<stratigraphicRange idref="r58"/>
+			<stratigraphicRange idref="r59"/>
+			<stratigraphicRange idref="r60"/>
+			<stratigraphicRange idref="r61"/>
+			<stratigraphicRange idref="r62"/>
+			<stratigraphicRange idref="r63"/>
+			<stratigraphicRange idref="r64"/>
+			<stratigraphicRange idref="r65"/>
+			<stratigraphicRange idref="r66"/>
+			<stratigraphicRange idref="r67"/>
+			<stratigraphicRange idref="r68"/>
+			<stratigraphicRange idref="r69"/>
+			<stratigraphicRange idref="r70"/>
+			<stratigraphicRange idref="r71"/>
+			<stratigraphicRange idref="r72"/>
+			<stratigraphicRange idref="r73"/>
+			<stratigraphicRange idref="r74"/>
+			<stratigraphicRange idref="r75"/>
+			<stratigraphicRange idref="r76"/>
+			<stratigraphicRange idref="r77"/>
+			<stratigraphicRange idref="r78"/>
+			<stratigraphicRange idref="r79"/>
+			<stratigraphicRange idref="r80"/>
+			<stratigraphicRange idref="r81"/>
+			<stratigraphicRange idref="r82"/>
+			<stratigraphicRange idref="r83"/>
+			<stratigraphicRange idref="r84"/>
+			<stratigraphicRange idref="r85"/>
+			<stratigraphicRange idref="r86"/>
+			<stratigraphicRange idref="r87"/>
+			<stratigraphicRange idref="r88"/>
+			<stratigraphicRange idref="r89"/>
+			<stratigraphicRange idref="r90"/>
+			<stratigraphicRange idref="r91"/>
+			<stratigraphicRange idref="r92"/>
+			<stratigraphicRange idref="r93"/>
+			<stratigraphicRange idref="r94"/>
+			<stratigraphicRange idref="r95"/>
+			<stratigraphicRange idref="r96"/>
+			<stratigraphicRange idref="r97"/>
+			<stratigraphicRange idref="r98"/>
+			<stratigraphicRange idref="r99"/>
+			<stratigraphicRange idref="r100"/>
+			<stratigraphicRange idref="r101"/>
+			<stratigraphicRange idref="r102"/>
+			<stratigraphicRange idref="r103"/>
+			<stratigraphicRange idref="r104"/>
+			<stratigraphicRange idref="r105"/>
+			<stratigraphicRange idref="r106"/>
+			<stratigraphicRange idref="r107"/>
+			<stratigraphicRange idref="r108"/>
+			<stratigraphicRange idref="r109"/>
+			<stratigraphicRange idref="r110"/>
+			<stratigraphicRange idref="r111"/>
+			<stratigraphicRange idref="r112"/>
+			<stratigraphicRange idref="r113"/>
+			<stratigraphicRange idref="r114"/>
+			<stratigraphicRange idref="r115"/>
+			<stratigraphicRange idref="r116"/>
+			<stratigraphicRange idref="r117"/>
+			<stratigraphicRange idref="r118"/>
+			<stratigraphicRange idref="r119"/>
+			<stratigraphicRange idref="r120"/>
+			<stratigraphicRange idref="r121"/>
+			<stratigraphicRange idref="r122"/>
+			<stratigraphicRange idref="r123"/>
+			<stratigraphicRange idref="r124"/>
+			<stratigraphicRange idref="r125"/>
+			<stratigraphicRange idref="r126"/>
+			<stratigraphicRange idref="r127"/>
+			<stratigraphicRange idref="r128"/>
+			<stratigraphicRange idref="r129"/>
+			<stratigraphicRange idref="r130"/>
+			<stratigraphicRange idref="r131"/>
+			<stratigraphicRange idref="r132"/>
+			<stratigraphicRange idref="r133"/>
+			<stratigraphicRange idref="r134"/>
+			<stratigraphicRange idref="r135"/>
+			<stratigraphicRange idref="r136"/>
+			<stratigraphicRange idref="r137"/>
+			<stratigraphicRange idref="r138"/>
+			<stratigraphicRange idref="r139"/>
+			<stratigraphicRange idref="r140"/>
+			<stratigraphicRange idref="r141"/>
+			<stratigraphicRange idref="r142"/>
+			<stratigraphicRange idref="r143"/>
+			<stratigraphicRange idref="r144"/>
+			<stratigraphicRange idref="r145"/>
+			<stratigraphicRange idref="r146"/>
+			<stratigraphicRange idref="r147"/>
+			<stratigraphicRange idref="r148"/>
+			<stratigraphicRange idref="r149"/>
+			<stratigraphicRange idref="r150"/>
+			<stratigraphicRange idref="r151"/>
+			<stratigraphicRange idref="r152"/>
+			<stratigraphicRange idref="r153"/>
+			<stratigraphicRange idref="r154"/>
+			<stratigraphicRange idref="r155"/>
+			<stratigraphicRange idref="r156"/>
+			<stratigraphicRange idref="r157"/>
+			<stratigraphicRange idref="r158"/>
+			<stratigraphicRange idref="r159"/>
+			<stratigraphicRange idref="r160"/>
+			<stratigraphicRange idref="r161"/>
+			<stratigraphicRange idref="r162"/>
+			<stratigraphicRange idref="r163"/>
+			<stratigraphicRange idref="r164"/>
+			<stratigraphicRange idref="r165"/>
+			<stratigraphicRange idref="r166"/>
+			<stratigraphicRange idref="r167"/>
+			<stratigraphicRange idref="r168"/>
+			<stratigraphicRange idref="r169"/>
+			<stratigraphicRange idref="r170"/>
+			<stratigraphicRange idref="r171"/>
+			<stratigraphicRange idref="r172"/>
+			<stratigraphicRange idref="r173"/>
+			<stratigraphicRange idref="r174"/>
+			<stratigraphicRange idref="r175"/>
+			<stratigraphicRange idref="r176"/>
+			<stratigraphicRange idref="r177"/>
+			<stratigraphicRange idref="r178"/>
+			<stratigraphicRange idref="r179"/>
+			<stratigraphicRange idref="r180"/>
+			<stratigraphicRange idref="r181"/>
+			<stratigraphicRange idref="r182"/>
+			<stratigraphicRange idref="r183"/>
+			<stratigraphicRange idref="r184"/>
+			<stratigraphicRange idref="r185"/>
+			<stratigraphicRange idref="r186"/>
+			<stratigraphicRange idref="r187"/>
+			<stratigraphicRange idref="r188"/>
+			<stratigraphicRange idref="r189"/>
+			<stratigraphicRange idref="r190"/>
+			<stratigraphicRange idref="r191"/>
+			<stratigraphicRange idref="r192"/>
+			<stratigraphicRange idref="r193"/>
+			<stratigraphicRange idref="r194"/>
+			<stratigraphicRange idref="r195"/>
+			<stratigraphicRange idref="r196"/>
+			<stratigraphicRange idref="r197"/>
+			<stratigraphicRange idref="r198"/>
+			<stratigraphicRange idref="r199"/>
+			<stratigraphicRange idref="r200"/>
+			<stratigraphicRange idref="r201"/>
+			<stratigraphicRange idref="r202"/>
+			<stratigraphicRange idref="r203"/>
+			<stratigraphicRange idref="r204"/>
+			<stratigraphicRange idref="r205"/>
+			<stratigraphicRange idref="r206"/>
+			<stratigraphicRange idref="r207"/>
+			<stratigraphicRange idref="r208"/>
+			<stratigraphicRange idref="r209"/>
+			<stratigraphicRange idref="r210"/>
+			<stratigraphicRange idref="r211"/>
+			<stratigraphicRange idref="r212"/>
+			<stratigraphicRange idref="r213"/>
+			<stratigraphicRange idref="r214"/>
+			<stratigraphicRange idref="r215"/>
+			<stratigraphicRange idref="r216"/>
+			<stratigraphicRange idref="r217"/>
+			<stratigraphicRange idref="r218"/>
+			<stratigraphicRange idref="r219"/>
+			<stratigraphicRange idref="r220"/>
+			<stratigraphicRange idref="r221"/>
+			<stratigraphicRange idref="r222"/>
+			<stratigraphicRange idref="r223"/>
+			<stratigraphicRange idref="r224"/>
+        </init>
+
+        <init id="netDiversificationInitializer" spec="feast.parameter.RandomRealParameter"
+              initial="@netDiversification" distr="@Uniform.div">
+        </init>
+        <init id="turnoverInitializer" spec="feast.parameter.RandomRealParameter"
+              initial="@turnOver" distr="@Uniform.turnover">
+        </init>
+        <init id="samplingProportionInitializer" spec="feast.parameter.RandomRealParameter"
+              initial="@samplingProportion" distr="@Uniform.samplingProportion">
+        </init>
+
+        <distribution id="posterior" spec="CompoundDistribution">
+            <distribution id="prior" spec="CompoundDistribution">
+                <distribution spec="SRangesBirthDeathSkylineModel" id="birthDeath" tree="@tree" conditionOnSurvival="true" removalProbability="0.0" intervalTimes="0">
+                    <origin idref="origin"/>
+                    <netDiversification idref="netDiversification"/>
+                    <turnOver idref="turnOver"/>
+                    <samplingProportion idref="samplingProportion"/>
+                    <rho idref="rho"/>
+                </distribution>
+                <prior id="originPrior" name="distribution" x="@origin">
+                    <Uniform id="Uniform.origin" name="distr" lower="1" upper="1000"/>
+                </prior>
+                <prior id="netDiversificationPrior" name="distribution" x="@netDiversification">
+                    <Uniform id="Uniform.div" name="distr" lower="0.7" upper="0.9" offset="0."/>
+                </prior>
+                <prior id="turnoverPrior" name="distribution" x="@turnOver">
+                    <Uniform id="Uniform.turnover" name="distr" lower="0.2" upper="0.8" offset="0."/>
+                </prior>
+                <prior id="samplingProportionPrior" name="distribution" x="@samplingProportion">
+                    <Uniform id="Uniform.samplingProportion" name="distr" lower="0.2" upper="0.8" offset="0."/>
+                </prior>
+                <prior id="rhoPrior" name="distribution" x="@rho">
+                    <Uniform id="Uniform.rho" lower="0.7" upper="1." name="distr"/>
+                </prior>
+
+            </distribution>
+
+        </distribution>
+
+
+<!--        Parameter operators -->
+        <operator id="originScaler" parameter="@origin" scaleFactor="0.75" spec="ScaleOperator" weight="1.0"/>
+        <operator id='netDiversificatonOperator' spec='ScaleOperator' scaleFactor=".75" weight="5" parameter="@netDiversification"/>
+        <operator id='turnOverOperator' spec='ScaleOperator' scaleFactor=".75" weight="5" parameter="@turnOver"/>
+        <operator id='samplingProportionOperator' spec='ScaleOperator' scaleFactor=".75" weight="5" parameter="@samplingProportion"/>
+        <operator id='rhoOperator' spec='ScaleOperator' scaleFactor=".75" weight="5" parameter="@rho"/>
+
+<!--        Tree operators -->
+        <operator id="SRWilsonBalding" spec='SRWilsonBalding' weight="20" tree="@tree"/>
+        <operator id="LeftRightChildSwap" spec='LeftRightChildSwap' weight="5" tree="@tree"/>
+        <operator id="LeafToSampledAncestorJump" spec='SRLeafToSampledAncestorJump' weight="20" tree="@tree" />
+        <operator spec="SAUniform" weight="20" tree="@tree"/>
+        <operator id="SATreeRootScaler" rootOnly="true" scaleFactor="0.56" spec="SAScaleOperator" tree="@tree" weight="3.0" />
+        <operator id='treeScaler' spec="SAScaleOperator" scaleFactor="0.16" weight="10.0" tree="@tree"/>
+
+
+        <logger logEvery="5000" fileName="sRanges.$(seed).log">
+            <model idref='posterior'/>
+
+            <log id="TreeHeight" spec="TreeHeightLogger" tree="@tree"/>
+            <log idref="origin"/>
+            <log idref="netDiversification"/>
+            <log idref="turnOver"/>
+            <log idref="samplingProportion"/>
+            <log idref="rho"/>
+            <log idref="posterior"/>
+        </logger>
+        <logger logEvery="5000" fileName="sRanges.$(seed).trees">
+        <log idref="tree"/>
+        </logger>
+    </run>
+        
+        
+        </beast>
